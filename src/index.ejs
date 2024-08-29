@@ -20,6 +20,7 @@
     {
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "single-spa-layout": "https://cdn.jsdelivr.net/npm/single-spa-layout@1.1.0/dist/single-spa-layout.min.js",
         "@testOrg/root-config": "//localhost:9000/testOrg-root-config.js",
         "@Angularpro": "//localhost:4201/main.js",
         "@angular-prject-MF": "//localhost:4203/main.js"
@@ -28,6 +29,11 @@
   </script>
 
   <style>
+    .header{
+      text-align: center;
+  color: red;
+  font-size: 1.8rem;
+    }
     .container {
       display: flex;
       align-items: center;
@@ -52,6 +58,7 @@
   </style>
   <!-- Preload single-spa -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+  
 
   <!-- Import Map Overrides for development -->
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
@@ -79,6 +86,14 @@
 
   <!-- Import Map Overrides (for development) -->
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <!-- Single-SPA Router Configuration -->
+  <script>
+    // System.import('single-spa-router').then(() => {
+    //   singleSpa.start();
+    // });
+ 
+  </script>
+  
 </body>
 
 </html>
